@@ -1,0 +1,26 @@
+/**scss 循环模块, 函数**/
+
+@import './_variable.scss';
+@each $type in $input-type {
+    input[type="#{$type}"] {
+        -webkit-appearance: none;
+    }
+}
+
+@for $i from 1 through 20 {
+    .w#{($i - 1)*20+$width-min-size} {
+        width:#{($i - 1)*20+$width-min-size}px;
+    }
+    .mgl#{($i - 1)*5+$mg-min-size} {
+        margin-left:#{($i - 1)*5+$mg-min-size}px;
+    }
+    .mgr#{($i - 1)*5+$mg-min-size} {
+        margin-right:#{($i - 1)*5+$mg-min-size}px;
+    }
+    .mgb#{($i - 1)*5+$mg-min-size} {
+        margin-bottom:#{($i - 1)*5+$mg-min-size}px;
+    }
+    .mgt#{($i - 1)*5+$mg-min-size} {
+        margin-top:#{($i - 1)*5+$mg-min-size}px;
+    }
+}

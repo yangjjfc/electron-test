@@ -1,0 +1,35 @@
+/**scss 变量**/
+
+$body-bg: #fff;
+//menu
+$menuHeight: 60px; //菜单栏高度
+$menu-bg:#ecf1f6;
+$menu-right-line:#d1dbe5;
+$menu-width:190px;
+$menu-close-width:74px;
+$menu-li-height:52px;
+$menu-li-line-color: #d1dbe5;
+$menu-nav-color: #333;
+$menu-nav-line-color:#03a8ae;
+$menu-bg-hover:#03a8ae;
+//header
+$header-height:60px;
+// $header-active:rgba(0, 0, 0, .1);
+$header-active:#04898e;
+$border-color:#ebeef5;
+$theam:#03a8ae; //主题色
+//其他
+$margin-small: 10px;
+$text-link-color: #4196EB;
+$text-success-color: #3aa13e;
+$text-warning-color:#e6a23c;
+$text-danger-color:#cc0000;
+$text-gray-color:gray;
+$tag-gray-color:gray;
+$tag-danger-color:#ef4040;
+$tag-warning-color:#e6a23c;
+$tag-success-color:#3aa13e;
+$width-min-size:100; //最小宽度
+$mg-min-size:5; //最小margin
+$input-type:button submit search reset; //type 类型
+$info:(success:#3aa13e, info:#4196EB, waring:#ff8800, gray:#8492A6, danger: #ff5252); //颜色信息z

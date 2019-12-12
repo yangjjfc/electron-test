@@ -1,0 +1,243 @@
+﻿/* 改变主题色变量 */
+
+$--color-primary: $theam;
+
+/* 改变 icon 字体路径变量，必需 */
+
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+@import "~element-ui/packages/theme-chalk/src/index";
+// element-ui全局样式改写
+.el-input--small {
+    font-size: 12px;
+}
+
+.el-form-item--mini.el-form-item,
+.el-form-item--small.el-form-item {
+    margin-bottom: $margin-small;
+}
+
+.el-table {
+    font-size: 12px;
+    th {
+        background-color: #ecf1f6;
+        padding: 5px 0;
+        .cell {
+            line-height: 26px;
+            .caret-wrapper {
+                height: 24px;
+                .sort-caret.ascending{
+                    top: 0;
+                }
+                .sort-caret.descending{
+                    bottom: 2px;
+                }
+            }
+        }
+    }
+    .el-dropdown-link {
+        color: $theam;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    
+    /deep/ .el-tag{
+        background-color: $theam;
+        color: #fff;
+    }
+    /deep/ .el-tag--info{
+        background-color: $tag-gray-color;
+        color: #fff;
+    }
+    /deep/ .el-tag--warning{
+        background-color: $tag-warning-color;
+        color: #fff;
+    }
+    /deep/ .el-tag--danger{
+        background-color: $tag-danger-color;
+        color: #fff;
+    }
+     /deep/ .el-tag--success{
+        background-color: $tag-success-color;
+        color: #fff;
+    }
+}
+
+.el-form-item__error {
+    position: inherit;
+}
+
+.sidebar .el-scrollbar__wrap {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.my-scroll{
+    /deep/ .el-scrollbar__wrap {
+        padding-bottom: 17px;
+        box-sizing: content-box;
+    }
+}
+.el-input__inner {
+    line-height: normal;
+}
+
+.img-form {
+    .el-form-item__content {
+        line-height: 1;
+    }
+}
+
+.el-table__expanded-cell {
+    padding: 20px 30px;
+}
+
+.el-table .table-header {
+    background: #f5f7fa;
+}
+
+.el-select {
+    width: 100%;
+}
+
+.el-badge__content {
+    background: #ff8800;
+    border: 0px;
+}
+
+.el-breadcrumb__separator {
+    font-weight: 400;
+}
+
+.el-table__empty-text {
+    font-size: 14px;
+}
+
+
+/*页码*/
+
+.el-pagination .el-pager .number,
+.el-pagination .btn-prev,
+.el-pagination .btn-next,
+.el-pagination .btn-prev {
+    background: #fff;
+    border: #D1DBE5 solid 1px;
+    padding: 0px 4px;
+    color: #666;
+    font-weight: normal;
+    min-width: 28px;
+}
+
+.el-form-item.is-error .vue-treeselect__control {
+    border-color: #f56c6c;
+}
+
+.el-pagination .el-pager .number {
+    margin-left: -1px;
+}
+
+.yl-pagination .el-pagination .el-pager .number.active {
+    border-color: $theam;
+    background: $theam;
+    color: #fff;
+}
+
+.el-pagination .btn-prev {
+    border-left: #D1DBE5 solid 1px;
+    border-right: 0px;
+    border-radius: 3px 0px 0px 3px;
+}
+
+.el-pagination .btn-next {
+    border-left: 0px;
+    border-radius: 0px 3px 3px 0px;
+}
+
+.el-date-editor.el-input {
+    width: auto;
+}
+
+
+
+/*tab切换样式*/
+
+.el-tabs--border-card {
+    box-shadow: none;
+    >.el-tabs__content {
+        padding: 12px;
+    }
+}
+.el-tabs__nav-next, .el-tabs__nav-prev {
+    line-height: 30px;
+}
+
+/*表格样式*/
+
+.el-table__header th {
+    color: #333;
+}
+.el-tabs__header{
+    margin-bottom: $margin-small;
+}
+.el-table__body td {
+    color: #333;
+    padding: 5px 0px;
+}
+
+.el-table {
+    .cell {
+        line-height: 20px;
+    }
+    th .cell {
+        // text-align: center;
+    }
+}
+
+.el-table .el-button--text {
+    padding: 5px 0px;
+}
+
+// tooltip最大宽度限制
+.el-tooltip__popper {
+    max-width: 400px !important;
+}
+
+.vue-treeselect__menu {
+    z-index: 100;
+}
+
+.el-loading-spinner {
+    font-size: 32px;
+    i,
+    .el-loading-text {
+        color: #fff;
+    }
+}
+
+
+/*弹窗*/
+
+.el-dialog__header {
+    background: #ECF2F6;
+    border-bottom: #E4EFF7 solid 1px;
+    padding: 10px 16px;
+    .el-dialog__title {
+        color: #333;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .el-dialog__close {
+        color: #333;
+    }
+    .el-dialog__headerbtn {
+        top: 17px;
+    }
+}
+
+.el-dialog__footer {
+    border-top: #E4EFF7 solid 1px;
+    padding: 12px;
+}
+
+.el-dialog__body {
+    font-size: 12px;
+    padding: 12px;
+}
