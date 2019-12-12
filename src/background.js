@@ -1,3 +1,10 @@
+/*
+ * @Author: yangjj
+ * @Date: 2019-12-11 17:29:54
+ * @LastEditors: yangjj
+ * @LastEditTime: 2019-12-12 17:42:46
+ * @Description: file content
+ */
 'use strict'
 
 import { app, protocol, BrowserWindow } from 'electron'
@@ -27,7 +34,8 @@ function createWindow () {
   } else {
     createProtocol('app')
     // Load the index.html when not in development
-    win.loadURL('app://./index.html')
+    // win.loadURL('app://./index.html')
+    win.loadURL('http://dms-admin.dev.cloudyigou.com')
   }
 
   win.on('closed', () => {

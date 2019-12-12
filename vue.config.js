@@ -2,7 +2,7 @@
  * @Author: yangjj
  * @Date: 2019-08-21 16:40:43
  * @LastEditors: yangjj
- * @LastEditTime: 2019-12-12 10:07:03
+ * @LastEditTime: 2019-12-12 17:43:02
  * @Description: file content
  */
 const PZ = require("./config");
@@ -26,7 +26,7 @@ module.exports = {
     electronBuilder: {
       builderOptions: {
         "appId": "com.example.app",
-        "productName":"aDemo",//项目名，也是生成的安装文件名，即aDemo.exe
+        "productName":"dms-admin",//项目名，也是生成的安装文件名，即aDemo.exe
         "copyright":"Copyright © 2019",//版权信息
         "directories":{
             "output":"./dist"//输出文件路径
@@ -42,6 +42,17 @@ module.exports = {
                     ]
                 }
             ]
+        },
+        "nsis": {
+          "oneClick": false, // 是否一键安装
+          "allowElevation": true, // 允许请求提升。 如果为false，则用户必须使用提升的权限重新启动安装程序。
+          "allowToChangeInstallationDirectory": true, // 允许修改安装目录
+          // "installerIcon": "./shanqis.ico",// 安装图标
+          // "uninstallerIcon": "./shanqis.ico",//卸载图标
+          // "installerHeaderIcon": "./shanqis.ico", // 安装时头部图标
+          "createDesktopShortcut": true, // 创建桌面图标
+          // "createStartMenuShortcut": true,// 创建开始菜单图标
+          "shortcutName": "dms-admin", // 图标名称
         }
       }
     }
@@ -82,7 +93,7 @@ module.exports = {
     }
   },
   devServer: {
-    open: true,
+    // open: true,
     proxy: {
       "/gateway": {
         target: "http://dms-admin.dev.cloudyigou.com",
