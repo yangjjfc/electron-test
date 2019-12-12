@@ -1,3 +1,10 @@
+/*
+ * @Author: yangjj
+ * @Date: 2019-08-21 16:41:20
+ * @LastEditors: yangjj
+ * @LastEditTime: 2019-12-12 14:37:58
+ * @Description: file content
+ */
 /**
  * router配置文件
  */
@@ -14,7 +21,7 @@ Vue.use(VueRouter);
 let defaultRouter = RouterMap._execMeun(RouterMap.map); // RouterMap._execMeun(localRouter).concat();
 const router = new VueRouter({
     routes: defaultRouter,
-    mode: 'history',
+    // mode: 'history',
     strict: process.env.NODE_ENV !== 'production',
     scrollBehavior (to, from, savedPosition) {
         return { x: 0, y: 0 };

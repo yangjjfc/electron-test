@@ -135,7 +135,7 @@ export default {
         // 刷新验证码
         getRandomImg () {
             this.form.verifycode = '';
-            this.verifyImg = '/gateway' + URL.VERIFY_CODE + '?t=' + Math.round(Math.random() * 1000000);
+            this.verifyImg = 'http://dms-admin.dev.cloudyigou.com'+'/gateway' + URL.VERIFY_CODE + '?t=' + Math.round(Math.random() * 1000000);
         },
         // 获取用户信息
         refreshCode () {

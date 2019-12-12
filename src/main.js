@@ -1,3 +1,10 @@
+/*
+ * @Author: yangjj
+ * @Date: 2019-08-21 16:39:29
+ * @LastEditors: yangjj
+ * @LastEditTime: 2019-12-12 13:41:10
+ * @Description: file content
+ */
 import Vue from 'vue';
 import router from './router/r-config.js';
 import store from './store/index.js';
@@ -6,9 +13,10 @@ import 'v-contextmenu/dist/index.css';
 import YcloudUi, { changeEnvironment } from 'ycloud-ui';
 import 'ycloud-ui/lib/theme-chalk/index.css';
 import App from './App';
-changeEnvironment(process.env.IMAGE_DOWNLOAD ? {
-    IMAGE_DOWNLOAD: process.env.IMAGE_DOWNLOAD
-} : { });
+changeEnvironment({
+    IMAGE_DOWNLOAD: process.env.IMAGE_DOWNLOAD,
+    REQUEST_URL:'http://dms-admin.dev.cloudyigou.com'
+});
 // 全局指令
 Vue.use(ContentMenu);
 Vue.use(YcloudUi);
