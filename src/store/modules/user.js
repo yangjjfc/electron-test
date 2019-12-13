@@ -21,10 +21,12 @@ const user = {
     mutations: {
         // 用户登入
         CHANGEUSER (state, data) {
+            console.log("TCL: CHANGEUSER -> data", data)
             state.userInfo = Object.assign({}, state.userInfo, data);
             changeEnvironment({
                 TOKEN: data.token
             });
+            document.cookie = `JSESSIONID=${data.token}`;
             sessionStorage.setItem('user', JSON.stringify(state.userInfo));
         },
         // 用户刷新,重新赋值
