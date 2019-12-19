@@ -2,12 +2,12 @@
  * @Author: yangjj
  * @Date: 2019-12-11 17:29:54
  * @LastEditors: yangjj
- * @LastEditTime: 2019-12-13 17:31:20
+ * @LastEditTime: 2019-12-16 10:56:05
  * @Description: file content
  */
 'use strict'
 
-import { app, protocol, BrowserWindow } from 'electron'
+import { app, protocol, BrowserWindow,Menu  } from 'electron'
 import {
   createProtocol,
   installVueDevtools
@@ -23,9 +23,15 @@ protocol.registerSchemesAsPrivileged([{scheme: 'app', privileges: { secure: true
 
 function createWindow () {
   // Create the browser window.
-  win = new BrowserWindow({ width: 800, height: 600, webPreferences: {
-    nodeIntegration: true
-  } })
+  win = new BrowserWindow({
+    width: 800,
+    height: 600,
+    webPreferences: {
+      nodeIntegration: true
+    },
+     // eslint-disable-next-line no-undef
+    //  icon: `${__static}/app.ico`
+  })
 
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     // Load the url of the dev server if in development mode
@@ -41,7 +47,32 @@ function createWindow () {
   win.on('closed', () => {
     win = null
   })
+  createMenu()
 }
+
+// 设置菜单栏
+function createMenu() {
+  // darwin表示macOS，针对macOS的设置
+  if (process.platform === 'darwin') {
+      const template = [
+      {
+          label: 'App Demo',
+          submenu: [
+              {
+                  role: 'about'
+              },
+              {
+                  role: 'quit'
+              }]
+      }]
+      let menu = Menu.buildFromTemplate(template)
+      Menu.setApplicationMenu(menu)
+  } else {
+      // windows及linux系统
+      Menu.setApplicationMenu(null)
+  }
+}
+
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
